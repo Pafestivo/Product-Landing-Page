@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: whitesmoke;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#header-img {
+  display: block;
+  margin-right: 4rem;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 4rem;
+  margin: auto 0;
+  padding-right: 4rem;
+  justify-self: end;
+}
+

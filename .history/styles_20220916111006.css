@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #eee;
+  overflow-x: hidden;
+}
+
+/* header */
+#nav-bar a {
+  text-decoration: none;
+  color: #eee;
+  background-color: #5C4033;
+  margin: 4px 2px;
+  padding: 15px 32px;
+  width: 100px;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.5s;
+  box-shadow: 3px 8px 22px rgb(32, 14, 11);
+}
+
+.hover-effect:hover {
+  transform: scale(1.1);
+}
+
+.hover-effect-sm:hover {
+  border: solid 3px #000;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: #eee;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+#nav-bar {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+  justify-self: end;
+}
+/* End of header */
+
+/* Main  */
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+main {
+  text-align: center;
+}
+
+/* Why us */
+#why-us {
+  padding: 10rem 0 2rem 0;
+}
+
+.reason {
+  display: flex;
+  justify-content: center;
+}
+
+.reason h3 {
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.reason p {
+  width: 600px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.fa-solid {
+  color: rgb(122, 94, 81);
+  padding: 0 3rem 3rem 0;
+}
+/* End of why us */
+
+/* Email form */
+form {
+  display: grid;
+  max-width: 600px;
+  margin: 0 auto;
+  row-gap: 5px;
+}
+
+.input-field {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  width: 60%;
+  justify-content: center;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+#email {
+  height: 30px;
+  width: 100%;
+  border-radius: 5px;
+  border: solid 1px #000;
+}
+
+#email::placeholder {
+  padding-left: 5px
+}
+
+#submit {
+  width: 60%;
+  height: 30px;
+  justify-self: start;
+  background-color: #5C4033;
+  color: #eee;
+  cursor: pointer;
+  transition: 0.1s;
+  border-radius: 10px;
+}
+/* End of email form */
+
+/* Video area */
+iframe {
+  margin: 20px 3px 0 0;
+  width: 70%;
+  height: 450px;
+  border: solid 8px rgb(142, 104, 91);
+  box-shadow: 3px 8px 22px rgb(32, 14, 11);
+}
+/* End of video area */
+/* Start of prices */
+#prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  margin-top: 40px;
+  gap: 50px;
+}
+
+.deal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid 2px rgb(142, 104, 91);
+  height: 350px;
+  box-shadow: 3px 8px 22px rgb(32, 14, 11);
+}
+
+.deal h2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.3rem;
+  background-color: rgb(122, 84, 71);
+  height: 60px;
+}
+
+.deal h3 {
+  font-size: 2rem;
+  font-style: italic;
+  padding: 10px 0 15px 0;
+}
+
+.deal p {
+  max-width: 50%;
+  margin: 0 auto;
+  line-height: 2rem;
+}
+
+.deal-btn {
+  position: absolute;
+  background-color: #5C4033;
+  color: #eee;
+  top: 75%;
+  left: 25%;
+  right: 25%;
+  color: #eee;
+  margin: 4px 2px;
+  padding: 15px 32px;
+  border-radius: 10px;
+  transition: 0.1s;
+  box-shadow: 3px 8px 22px rgb(32, 14, 11);
+  cursor: pointer;
+}
+/* End of prices */
+/* End of main */
+
+/* Footer area */
+footer {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr 1fr;
+  background-color: #ddd;
+  height: 80px;
+  margin-top: 60px;
+}
+/* End of footer area */
+
+/* Media Queries */
+@media only screen and (max-width: 1000px) {
+  header {
+    grid-template-columns: 1fr;
+    place-items: center;
+    position: static;
+  }
+
+  #nav-bar {
+    justify-self: center;
+  }
+
+  .reason p {
+    max-width: 75vw;
+  }
+
+  iframe {
+    width: 80vw;
+    height: 45vw;
+  }
+
+  #submit {
+    width: 300px;
+    height: 50px;
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #nav-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  #nav-bar a {
+    width: 70vw;
+    transition: 0;
+    margin-top: 1rem;
+  }
+
+  .hover-effect:hover {
+    transform: none;
+  }
+  
+  #why-us {
+    padding: 4rem 0 1rem 0;
+  }
+  
+  .reason p {
+    width: 50vw;
+  }
+}
+/* End of media queries */
